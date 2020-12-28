@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <View
-        android:id="@+id/view"
+        android:id="@+id/horizenbar"
         android:layout_width="360dp"
         android:layout_height="1dp"
         android:layout_marginBottom="130dp"
