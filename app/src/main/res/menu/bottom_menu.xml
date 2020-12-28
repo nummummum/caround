@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/buttonBack"
+        android:icon="@drawable/ic_back"
+        android:title=""/>
+
+    <item
+        android:id="@+id/buttonWrite"
+        android:icon="@drawable/ic_baseline_add_comment_24"
+        android:title=""/>
+    <item
+        android:id="@+id/buttonNotice"
+        android:icon="@drawable/ic_baseline_notifications_24"
+        android:title=""/>
+    <item
+        android:id="@+id/buttonMy"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title=""/>
+
+</menu>
