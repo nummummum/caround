@@ -1,5 +1,6 @@
 package com.projes.caround;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -9,7 +10,7 @@ import androidx.fragment.app.Fragment;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class MainActivity extends AppCompatActivity implements FragmentCall{
+public class MainActivity extends AppCompatActivity implements FragmentCall {
     BottomNavigationView bottomNavigationView;
     WriteFragment frag1;
     NotiFragment frag2;
@@ -30,8 +31,10 @@ public class MainActivity extends AppCompatActivity implements FragmentCall{
                 switch (item.getItemId()){
                     case R.id.buttonBack:
                         onFragmentSelected(0);
+                        return true;
                     case R.id.buttonWrite:
-                        onFragmentSelected(1);
+                        Intent intent = new Intent(getApplicationContext(), WriteActivity.class);
+                        startActivity(intent); //작성 액티비티 호출로 변경
                         return true;
                     case R.id.buttonNotice:
                         onFragmentSelected(2);
@@ -42,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements FragmentCall{
                 }
                 return false;
             }
-        });
+        }); //하단 네비게이션 아이템 선택시 프래그먼트 이동 메소드 호출
 
         frag1 = new WriteFragment();
         frag2 = new NotiFragment();
@@ -53,17 +56,18 @@ public class MainActivity extends AppCompatActivity implements FragmentCall{
     public void onFragmentSelected(int position) {
         Fragment currentFragment = null;
 
-        if(position == 1){
-            currentFragment = frag1;
-        } else if(position == 2){
+        if(position == 2){
             currentFragment = frag2;
         } else if(position == 3){
             currentFragment = frag3;
         } else if(position == 0){
             onBackPressed();
         }
-        getSupportFragmentManager().beginTransaction().replace(R.id.Main_Frame, currentFragment).addToBackStack(null).commit();
-    }
+
+        if(position != 0 && position != 1){
+            getSupportFragmentManager().beginTransaction().replace(R.id.Main_Frame, currentFragment).addToBackStack(null).commit();
+        }
+    }//하단 네비게이션 클릭시 호출되어 프래그먼트 변경
 
     @Override
     public void onBackPressed() {

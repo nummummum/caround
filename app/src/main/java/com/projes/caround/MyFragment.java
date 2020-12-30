@@ -72,6 +72,8 @@ public class MyFragment extends Fragment {
                 getChildFragmentManager().beginTransaction().replace(R.id.myContainer, bookmarkFragment).commit();
             }
         });
+        //여기까지 마이페이지 안의 상세 프래그먼트 바꿔주는 코드
+
         alert=(TextView) rootView.findViewById(R.id.btn_textalert);
         alert.setOnClickListener(new View.OnClickListener() {
             @Override
