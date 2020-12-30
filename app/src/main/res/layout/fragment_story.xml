@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/centerStoryMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="생각을 자유롭게 적어보세요."
+        android:textSize="17sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"/>
+    <TextView
+        android:id="@+id/subStoryMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="작성된 이야기는 공개되기 전까지"
+        android:layout_below="@+id/centerStoryMessage"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="다른 사람들이 볼 수 없습니다."
+        android:layout_below="@+id/subStoryMessage"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

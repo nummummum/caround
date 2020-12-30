@@ -1,93 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@drawable/main_background">
+    >
 
-    <LinearLayout
-        android:id="@+id/mainFrame"
+    <FrameLayout
+        android:id="@+id/Main_Frame"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="56dp"
-        android:orientation="vertical">
-
-        <FrameLayout
-            android:id="@+id/mainContainer"
-            android:layout_width="match_parent"
-            android:layout_height="450dp">
-
-
-        </FrameLayout>
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:src="@drawable/home_slider1"/>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:id="@+id/imageLocation"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_baseline_location_on_24"/>
-
-            <TextView
-                android:id="@+id/textLocation"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="어딘가"
-                android:layout_toRightOf="@+id/imageLocation"/>
-
-            <TextView
-                android:id="@+id/textTime"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="방금전"
-                android:layout_marginLeft="10dp"
-                android:layout_toRightOf="@+id/textLocation"/>
-
-            <TextView
-                android:id="@+id/textCommentNumber"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="3"
-                android:layout_marginRight="10dp"
-                android:layout_alignParentRight="true"/>
-            <ImageView
-                android:id="@+id/imageCommentNumber"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_baseline_mode_comment_24"
-                android:layout_marginRight="5dp"
-                android:layout_toLeftOf="@+id/textCommentNumber"/>
-
-            <TextView
-                android:id="@+id/textLikeNumber"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="9"
-                android:layout_toLeftOf="@+id/imageCommentNumber"
-                android:layout_marginRight="10dp"/>
-            <ImageView
-                android:id="@+id/imageLikeNumber"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_baseline_favorite_24"
-                android:layout_toLeftOf="@+id/textLikeNumber"
-                android:layout_marginRight="5dp"/>
-
-
-        </RelativeLayout>
-
-    </LinearLayout>
-
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></FrameLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
@@ -95,5 +23,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="#00FFFFFF"
-        app:menu="@menu/bottom_menu" />
-</RelativeLayout>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Main_Frame"
+        app:menu="@menu/bottom_menu">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+</androidx.constraintlayout.widget.ConstraintLayout>

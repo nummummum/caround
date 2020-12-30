@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/centerStoryMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="댓글을 써보세요."
+        android:textSize="17sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"/>
+    <TextView
+        android:id="@+id/subStoryMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="누군가의 이야기에 마음을 담은 댓글을 써보세요."
+        android:layout_below="@+id/centerStoryMessage"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

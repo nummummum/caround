@@ -10,12 +10,10 @@
         android:id="@+id/horizenbar"
         android:layout_width="360dp"
         android:layout_height="1dp"
-        android:layout_marginBottom="130dp"
         android:background="#D3D0D0"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/centent_text" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <ImageView
         android:id="@+id/img_close"
@@ -78,48 +76,114 @@
         app:srcCompat="@drawable/ic_baseline_room_24"
         tools:ignore="VectorDrawableCompat" />
 
-    <TextView
-        android:id="@+id/centent_text"
-        android:layout_width="411dp"
-        android:layout_height="450dp"
-        android:layout_marginTop="16dp"
-        android:gravity="center"
-        android:text="생각을 자유롭게 적어보세요."
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_gallary" />
+        app:layout_constraintTop_toBottomOf="@+id/img_gallary">
 
-    <ImageView
-        android:id="@+id/img_location_bottom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/centent_text"
-        app:srcCompat="@drawable/ic_baseline_room_24"
-        tools:ignore="VectorDrawableCompat" />
+        <EditText
+            android:id="@+id/centent_text"
+            android:layout_width="411dp"
+            android:layout_height="450dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="생각을 자유롭게 적어보세요."
+            android:inputType="textPersonName" />
+        
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/text_distance"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
-        android:layout_marginLeft="2dp"
-        android:layout_marginTop="18dp"
-        android:text="○○km 이내"
-        app:layout_constraintStart_toEndOf="@+id/img_location_bottom"
-        app:layout_constraintTop_toBottomOf="@+id/centent_text" />
-
-    <TextView
-        android:id="@+id/text_page"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:text="1/1"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/centent_text" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <ImageView
+            android:id="@+id/img_location_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            app:srcCompat="@drawable/ic_baseline_room_24"
+            tools:ignore="VectorDrawableCompat" />
+
+        <TextView
+            android:id="@+id/text_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="18dp"
+            android:text="○○km 이내" />
+
+        <TextView
+            android:id="@+id/text_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="250dp"
+            android:layout_marginTop="18dp"
+            android:text="1/1" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearblack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/img_gallary_btm"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_baseline_photo_24"
+            tools:ignore="VectorDrawableCompat" />
+
+        <ImageView
+            android:id="@+id/img_mic_btm"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_baseline_mic_24"
+            tools:ignore="VectorDrawableCompat" />
+
+        <ImageView
+            android:id="@+id/img_music_btm"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_baseline_music_note_24"
+            tools:ignore="VectorDrawableCompat" />
+
+        <TextView
+            android:id="@+id/text_sharp_btm"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="250dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="#"
+            android:textColor="#FFFFFF"
+            android:textSize="24dp" />
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
