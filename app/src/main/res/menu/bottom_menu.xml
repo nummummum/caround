@@ -13,7 +13,7 @@
     <item
         android:id="@+id/buttonNotice"
         android:icon="@drawable/ic_baseline_notifications_24"
-        android:title=""/>
+        android:title="" />
     <item
         android:id="@+id/buttonMy"
         android:icon="@drawable/ic_baseline_person_24"

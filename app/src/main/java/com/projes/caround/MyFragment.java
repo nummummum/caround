@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -24,6 +25,8 @@ public class MyFragment extends Fragment {
     TagFragment tagFragment;
     ReplyFragment replyFragment;
     BookmarkFragment bookmarkFragment;
+    BaseDialog buzziDialog;
+    Button btn_buzzy;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -42,7 +45,7 @@ public class MyFragment extends Fragment {
         replyFragment = new ReplyFragment();
         bookmarkFragment = new BookmarkFragment();
 
-        getChildFragmentManager().beginTransaction().add(R.id.myContainer, storyFragment).commit();
+        getChildFragmentManager().beginTransaction().replace(R.id.myContainer, storyFragment).commit();
 
         TextView btn_story = (TextView) rootView.findViewById(R.id.btn_story);
         btn_story.setOnClickListener(new View.OnClickListener() {
@@ -98,6 +101,15 @@ public class MyFragment extends Fragment {
                     }
                 });
                 dlg.show();//dialog 창을 보여주는 역할
+            }
+        });
+
+        btn_buzzy = (Button) rootView.findViewById(R.id.btn_buzzy);
+        btn_buzzy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                buzziDialog = new BaseDialog(getContext(), R.layout.buzzi_layout);
+                buzziDialog.show();
             }
         });
 

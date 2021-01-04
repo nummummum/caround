@@ -15,14 +15,15 @@ public class MainActivity extends AppCompatActivity implements FragmentCall {
     WriteFragment frag1;
     NotiFragment frag2;
     MyFragment frag3;
+    Fragment1 fragment1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Fragment1 fragment1 = new Fragment1();
-        getSupportFragmentManager().beginTransaction().add(R.id.Main_Frame, fragment1).addToBackStack(null).commit();
+        fragment1 = new Fragment1();
+        getSupportFragmentManager().beginTransaction().add(R.id.Main_Frame, fragment1).commit();
 
         bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -61,12 +62,11 @@ public class MainActivity extends AppCompatActivity implements FragmentCall {
         } else if(position == 3){
             currentFragment = frag3;
         } else if(position == 0){
-            onBackPressed();
+            currentFragment = fragment1;
         }
 
-        if(position != 0 && position != 1){
-            getSupportFragmentManager().beginTransaction().replace(R.id.Main_Frame, currentFragment).addToBackStack(null).commit();
-        }
+        getSupportFragmentManager().beginTransaction().replace(R.id.Main_Frame, currentFragment).commit();
+
     }//하단 네비게이션 클릭시 호출되어 프래그먼트 변경
 
     @Override

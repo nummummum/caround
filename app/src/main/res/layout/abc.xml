@@ -9,15 +9,18 @@
     android:id="@+id/writebackground"
     >
 
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
+
         <LinearLayout
+            android:id="@+id/Top_label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/Top_label"
-            >
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
             <ImageView
                 android:id="@+id/img_close"
                 android:layout_width="wrap_content"
@@ -29,6 +32,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_baseline_close_24"
                 tools:ignore="VectorDrawableCompat" />
+
             <ImageView
                 android:id="@+id/img_emotion"
                 android:layout_width="wrap_content"
@@ -61,6 +65,7 @@
                 android:layout_toRightOf="@+id/img_gallary"
                 app:srcCompat="@drawable/ic_baseline_room_24"
                 tools:ignore="VectorDrawableCompat" />
+
             <TextView
                 android:id="@+id/btn_save"
                 android:layout_width="wrap_content"
@@ -68,16 +73,22 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginRight="16dp"
-                android:text="저장"
-                android:layout_toRightOf="@+id/img_location"/>
+                android:layout_toRightOf="@+id/img_location"
+                android:text="저장" />
         </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:id="@+id/linearLayout2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_below="@+id/Top_label"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Top_label"
             tools:ignore="NotSibling">
 
@@ -91,14 +102,20 @@
                 android:hint="생각을 자유롭게 적어보세요."
                 android:inputType="textPersonName" />
         </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="140dp"
             android:orientation="horizontal"
-            android:layout_below="@id/linearLayout2"
-            >
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
 
             <ImageView
                 android:id="@+id/img_location_bottom"
@@ -117,16 +134,16 @@
                 android:layout_marginStart="2dp"
                 android:layout_marginLeft="2dp"
                 android:layout_marginTop="18dp"
-                android:textColor="#B4B4B4"
-                android:text="○○km 이내" />
+                android:text="○○km 이내"
+                android:textColor="#B4B4B4" />
+
             <ImageView
                 android:id="@+id/emotion_image"
                 android:layout_width="16dp"
                 android:layout_height="16dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
-                android:layout_marginTop="18dp"
-                />
+                android:layout_marginTop="18dp" />
 
             <TextView
                 android:id="@+id/emotion_text"
@@ -135,8 +152,7 @@
                 android:layout_marginStart="2dp"
                 android:layout_marginLeft="2dp"
                 android:layout_marginTop="18dp"
-                android:textColor="#B4B4B4"
-                />
+                android:textColor="#B4B4B4" />
 
             <TextView
                 android:id="@+id/text_page"
@@ -146,59 +162,66 @@
                 android:layout_marginTop="18dp"
                 android:text="1/1" />
         </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:id="@+id/linearblack"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
             android:background="#000000"
             android:orientation="horizontal"
-            android:layout_alignParentBottom="true">
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
 
             <ImageView
                 android:id="@+id/img_gallary_btm"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/ic_baseline_photo_24"
                 tools:ignore="VectorDrawableCompat" />
 
             <ImageView
                 android:id="@+id/img_mic_btm"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/ic_baseline_mic_24"
                 tools:ignore="VectorDrawableCompat" />
 
             <ImageView
                 android:id="@+id/img_music_btm"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/ic_baseline_music_note_24"
                 tools:ignore="VectorDrawableCompat" />
 
             <TextView
                 android:id="@+id/text_sharp_btm"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="4dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="250dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="#"
                 android:textColor="#FFFFFF"
                 android:textSize="24dp" />
         </LinearLayout>
-    </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     <GridView
