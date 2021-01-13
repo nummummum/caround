@@ -10,6 +10,10 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 public class ReplyFragment extends Fragment {
+    public static ReplyFragment newInstacne(){
+        ReplyFragment replyFragment=new ReplyFragment();
+        return replyFragment;
+    }
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

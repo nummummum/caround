@@ -10,6 +10,11 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 public class BookmarkFragment extends Fragment {
+
+    public static BookmarkFragment newInstacne(){
+        BookmarkFragment bookmarkFragment=new BookmarkFragment();
+        return bookmarkFragment;
+    }
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
