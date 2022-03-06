@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="550dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="bottom"
+    >
+    <LinearLayout
+
+        android:id="@+id/buzzi_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#ffffff"
+        android:layout_gravity="bottom">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/buzzi_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_baseline_close_24"
+                tools:ignore="VectorDrawableCompat"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="버찌"
+                android:textColor="#000000"
+                android:textSize="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></TextView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#000000"
+            ></View>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="버찌는 내가 단 댓글에 누군가 공감하면 받고,"></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="나의 이야기를 공개하는 사용할수 있습니다."></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:textSize="20dp"
+                android:text="사용 가능한 버찌"
+                android:gravity="bottom"></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30dp"
+                android:text="0"
+                android:textColor="#000000"></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:textSize="17dp"
+                android:gravity="bottom"
+                android:text="내가 받은 모든 버찌 0"></TextView>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#000000"
+            ></View>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center|top">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:gravity="bottom"
+                android:textSize="17dp"
+                android:text="내가 받은 버찌들"></TextView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="280dp">
+
+                <TextView
+                    android:id="@+id/textView25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="33dp"
+                    android:layout_marginLeft="33dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Tue"
+                    android:textSize="10dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView33"
+                    app:layout_constraintTop_toBottomOf="@+id/view6" />
+
+                <TextView
+                    android:id="@+id/textView27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="33dp"
+                    android:layout_marginLeft="33dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Wed"
+                    android:textSize="10dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView25"
+                    app:layout_constraintTop_toBottomOf="@+id/view6" />
+
+                <View
+                    android:id="@+id/view7"
+                    android:layout_width="1dp"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginLeft="28dp"
+                    android:background="#000000"
+                    app:layout_constraintBottom_toBottomOf="@+id/view6"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <View
+                    android:id="@+id/view6"
+                    android:layout_width="350dp"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="60dp"
+                    android:background="#000000"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/view7" />
+
+                <TextView
+                    android:id="@+id/lastWeek_Sun"
+                    android:layout_width="15dp"
+                    android:layout_height="1px"
+                    android:background="#FF5722"
+                    android:textSize="10dp"
+                    app:layout_constraintBottom_toTopOf="@+id/view6"
+                    app:layout_constraintStart_toEndOf="@+id/view7" />
+
+                <TextView
+                    android:id="@+id/thisWeek_Sun"
+                    android:layout_width="15dp"
+                    android:textSize="10dp"
+                    android:layout_height="1px"
+                    android:background="#FFBB00"
+                    app:layout_constraintBottom_toTopOf="@+id/view6"
+                    app:layout_constraintStart_toEndOf="@+id/lastWeek_Sun" />
+
+                <TextView
+                    android:id="@+id/thisWeek_Mon"
+                    android:layout_width="15dp"
+                    android:textSize="10dp"
+                    android:layout_height="1px"
+                    android:background="#FFBB00"
+                    app:layout_constraintBottom_toTopOf="@+id/view6"
+                    app:layout_constraintStart_toEndOf="@+id/lastWeek_Mon" />
+
+                <TextView
+                    android:id="@+id/thisWeek_Tue"
+                    android:layout_width="15dp"
+                    android:layout_height="1px"
+                    android:background="#FFBB00"
+                    android:textSize="10dp"
+                    app:layout_constraintBottom_toTopOf="@+id/view6"
+                    app:layout_constraintStart_toEndOf="@+id/lastWeek_Tue" />
+
+                <TextView
+                    android:id="@+id/thisWeek_Wed"
+                    android:layout_width="15dp"
+                    android:layout_height="1px"
+                    android:background="#FFBB00"
+                    android:textSize="10dp"
+                    app:layout_constraintBottom_toTopOf="@+id/view6"
+                    app:layout_constraintStart_toEndOf="@+id/lastWeek_Wed" />
+
+                <TextView
+                    android:id="@+id/thisWeek_Thu"
+                    android:layout_width="15dp"
+                    android:layout_height="1px"
+                    android:textSize="10dp"
+                    android:background="#FFBB00"
+                    app:layout_constraintBottom_toTopOf="@+id/view6"
+                    app:layout_constraintStart_toEndOf="@+id/lastWeek_Thu" />
+
+                <TextView
+                    android:id="@+id/thisWeek_Fri"
+                    android:layout_width="15dp"
+                    android:layout_height="1px"
+                    android:background="#FFBB00"
+                    android:textSize="10dp"
+                    app:layout_constraintBottom_toTopOf="@+id/view6"
+                    app:layout_constraintStart_toEndOf="@+id/lastWeek_Fri" />
+
+                <TextView
+                    android:id="@+id/thisWeek_Sat"
+                    android:layout_width="15dp"
+                    android:layout_height="1px"
+                    android:textSize="10dp"
+                    android:background="#FFBB00"
+                    app:layout_constraintBottom_toTopOf="@+id/view6"
+                    app:layout_constraintStart_toEndOf="@+id/lastWeek_Sat" />
+
+                <TextView
+                    android:id="@+id/lastWeek_Mon"
+                    android:layout_width="15dp"
+                    android:layout_height="1px"
+                    android:textSize="10dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="#FF5722"
+                    app:layout_constraintBottom_toTopOf="@+id/view6"
+                    app:layout_constraintStart_toEndOf="@+id/thisWeek_Sun" />
+
+                <TextView
+                    android:id="@+id/lastWeek_Tue"
+                    android:layout_width="15dp"
+                    android:layout_height="1px"
+                    android:textSize="10dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="#FF5722"
+                    app:layout_constraintBottom_toTopOf="@+id/view6"
+                    app:layout_constraintStart_toEndOf="@+id/thisWeek_Mon" />
+
+                <TextView
+                    android:id="@+id/lastWeek_Wed"
+                    android:layout_width="15dp"
+                    android:layout_height="1px"
+                    android:textSize="10dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="#FF5722"
+                    app:layout_constraintBottom_toTopOf="@+id/view6"
+                    app:layout_constraintStart_toEndOf="@+id/thisWeek_Tue" />
+
+
+                <TextView
+                    android:id="@+id/lastWeek_Thu"
+                    android:layout_width="15dp"
+                    android:layout_height="1px"
+                    android:textSize="10dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="#FF5722"
+                    app:layout_constraintBottom_toTopOf="@+id/view6"
+                    app:layout_constraintStart_toEndOf="@+id/thisWeek_Wed" />
+
+                <TextView
+                    android:id="@+id/lastWeek_Fri"
+                    android:layout_width="15dp"
+                    android:layout_height="1px"
+                    android:textSize="10dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="#FF5722"
+                    app:layout_constraintBottom_toTopOf="@+id/view6"
+                    app:layout_constraintStart_toEndOf="@+id/thisWeek_Thu" />
+
+                <TextView
+                    android:id="@+id/lastWeek_Sat"
+                    android:layout_width="15dp"
+                    android:layout_height="1px"
+                    android:textSize="10dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="#FF5722"
+                    app:layout_constraintBottom_toTopOf="@+id/view6"
+                    app:layout_constraintStart_toEndOf="@+id/thisWeek_Fri" />
+
+                <View
+                    android:id="@+id/view9"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="160dp"
+                    android:layout_marginLeft="160dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="#FF5722"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <View
+                    android:id="@+id/view10"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="#FFBB00"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textView20" />
+
+                <TextView
+                    android:id="@+id/textView20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginBottom="14dp"
+                    android:text="지난주"
+                    android:textSize="13dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/view9" />
+
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginBottom="14dp"
+                    android:text="이번주"
+                    android:textSize="13dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/view10" />
+
+                <TextView
+                    android:id="@+id/textView33"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Mon"
+                    android:textSize="10dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView32"
+                    app:layout_constraintTop_toBottomOf="@+id/view6" />
+
+                <TextView
+                    android:id="@+id/textView32"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="37dp"
+                    android:layout_marginLeft="37dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Sun"
+                    android:textSize="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view6" />
+
+                <TextView
+                    android:id="@+id/textView29"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Thu"
+                    android:textSize="10dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView27"
+                    app:layout_constraintTop_toBottomOf="@+id/view6" />
+
+                <TextView
+                    android:id="@+id/textView30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="36dp"
+                    android:layout_marginLeft="36dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Fri"
+                    android:textSize="10dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView29"
+                    app:layout_constraintTop_toBottomOf="@+id/view6" />
+
+                <TextView
+                    android:id="@+id/textView31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="38dp"
+                    android:layout_marginLeft="38dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Sat"
+                    android:textSize="10dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView30"
+                    app:layout_constraintTop_toBottomOf="@+id/view6" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

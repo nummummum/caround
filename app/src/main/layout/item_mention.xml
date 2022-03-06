@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/user_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_12"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:id="@+id/user_mention"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/user_image"
+        android:layout_marginTop="10dp"
+        android:text="댓글 내용"/>
+
+    <TextView
+        android:id="@+id/mention_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/user_image"
+        android:layout_below="@+id/user_mention"
+        android:textSize="8sp"
+        android:text="1시간 전"/>
+
+    <ImageView
+        android:id="@+id/btn_user_buzzi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_favorite_24"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"/>
+
+</RelativeLayout>

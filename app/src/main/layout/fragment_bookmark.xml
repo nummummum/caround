@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/centerStoryMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="북마크를 해보세요."
+        android:textSize="17sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"/>
+    <TextView
+        android:id="@+id/subStoryMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="이야기를 읽다가 오른쪽 상단의 메뉴를 누르면"
+        android:layout_below="@+id/centerStoryMessage"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="북마크를 할 수 있어요."
+        android:layout_below="@+id/subStoryMessage"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>
